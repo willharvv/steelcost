@@ -1,8 +1,32 @@
-print('Enter all values in meters(m)')
+print('Please enter all values in meters(m)')
 
-length = int(input('Length >'))#have to use int as python input function always returns string 
-height = int(input('Height >'))
-width = int(input('Width >'))
+while True:
+    try:
+        length = float(input("length > "))
+        if length > 0:
+            break
+        else:
+            print("length should be positive. Please try again.")
+    except ValueError:
+        print("Invalid length. Please try again.")
+while True:
+    try:
+        height = float(input("height > "))
+        if height > 0:
+            break
+        else:
+            print("height should be positive. Please try again.")
+    except ValueError:
+        print("Invalid height. Please try again.")
+while True:
+    try:
+        width = float(input("width > "))
+        if width > 0:
+            break
+        else:
+            print("width should be positive. Please try again.")
+    except ValueError:
+        print("Invalid width. Please try again.")
 
 def findcostofshed():
 
